@@ -732,21 +732,21 @@
       {
         if(moveMode==1)
         {
-          if(e.keyCode==87) positionY=positionY-1.0;   // W
-          if(e.keyCode==83) positionY=positionY+1.0;   // S
-          if(e.keyCode==68) positionX=positionX-1.0;   // D
-          if(e.keyCode==65) positionX=positionX+1.0;   // A
-          if(e.keyCode==81) positionZ=positionZ+1.0;   // Q
-          if(e.keyCode==69) positionZ=positionZ-1.0;   // E
+          if(e.keyCode==87) positionY=positionY-0.10;   // W
+          if(e.keyCode==83) positionY=positionY+0.10;   // S
+          if(e.keyCode==68) positionX=positionX-0.10;   // D
+          if(e.keyCode==65) positionX=positionX+0.10;   // A
+          if(e.keyCode==81) positionZ=positionZ+0.10;   // Q
+          if(e.keyCode==69) positionZ=positionZ-0.10;   // E
         }
         else if(moveMode==2)
         {
-          if(e.keyCode==87) rotationX=rotationX+1.0;   // W
-          if(e.keyCode==83) rotationX=rotationX-1.0;   // S
-          if(e.keyCode==68) rotationY=rotationY+1.0;   // D
-          if(e.keyCode==65) rotationY=rotationY-1.0;   // A
-          if(e.keyCode==81) rotationZ=rotationZ+1.0;   // Q
-          if(e.keyCode==69) rotationZ=rotationZ-1.0;   // E
+          if(e.keyCode==87) rotationX=rotationX+0.10;   // W
+          if(e.keyCode==83) rotationX=rotationX-0.10;   // S
+          if(e.keyCode==68) rotationY=rotationY+0.10;   // D
+          if(e.keyCode==65) rotationY=rotationY-0.10;   // A
+          if(e.keyCode==81) rotationZ=rotationZ+0.10;   // Q
+          if(e.keyCode==69) rotationZ=rotationZ-0.10;   // E
         }
 
         //if(e.keyCode==82) tz=tz+1.0;                   // R
@@ -754,6 +754,17 @@
 
         if(e.keyCode==49) moveMode = 1;                // Position moving
         if(e.keyCode==50) moveMode = 2;                // Rotate moving
+
+        if(e.keyCode==32)                              // Spacebar - Reset
+        {
+          positionX = 0.0;
+          positionY = 0.0;
+          positionZ = -50.0;
+
+          rotationX = 0.0;
+          rotationY = 0.0;
+          rotationZ = 0.0;  
+        }               
 
         //alert(e.keyCode);
         //alert(rotationX);
